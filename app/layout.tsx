@@ -1,6 +1,5 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Navigation from "./components/Navigation";
 
 
 export default function RootLayout({
@@ -9,8 +8,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
+    <html>
+      <body style={{
+            background: '#11071F'
+        }}>
+        <Navigation/>
         {children}
       </body>
     </html>

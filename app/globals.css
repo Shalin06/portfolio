@@ -123,3 +123,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+.bg-background {
+  background-color: transparent !important;
+}
+
+img, video {
+    max-width: auto;
+    height: auto;
+  }
