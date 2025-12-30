@@ -1,5 +1,5 @@
 "use client";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Avatar, AvatarImage } from "@/app/components/ui/avatar";
 import {
     Card,
     CardAction,
@@ -7,7 +7,7 @@ import {
     CardDescription,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card";
+} from "@/app/components/ui/card";
 import { calculateExperience } from "@/lib/utils";
 import Link from "next/link";
 import { useState, useEffect } from "react";

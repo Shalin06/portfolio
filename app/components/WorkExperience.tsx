@@ -4,9 +4,9 @@ import {
     AccordionItem,
     AccordionTrigger,
     AccordionContent,
-} from "@/components/ui/accordion";
-import { AvatarImage } from "@/components/ui/avatar";
-import { Card, CardHeader, CardTitle } from "@/components/ui/card";
+} from "@/app/components/ui/accordion";
+import { AvatarImage } from "@/app/components/ui/avatar";
+import { Card, CardHeader, CardTitle } from "@/app/components/ui/card";
 import { Avatar } from "@radix-ui/react-avatar";
 import {
     IconCalendarFilled,
