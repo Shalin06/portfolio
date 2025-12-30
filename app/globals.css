@@ -119,6 +119,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -128,7 +129,19 @@
   background-color: transparent !important;
 }
 
-img, video {
-    max-width: auto;
-    height: auto;
-  }
+img,
+video {
+  max-width: auto;
+  height: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#about-section,
+#work-section,
+#projects-section,
+#contact-section {
+  scroll-margin-top: 65px;
+}
