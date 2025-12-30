@@ -5,9 +5,7 @@ import {
     NavigationMenu,
     NavigationMenuItem,
     NavigationMenuList,
-    navigationMenuTriggerStyle,
 } from "@/app/components/ui/navigation-menu";
-import Link from "next/link";
 
 function Navigation({ children }: { children: React.ReactNode }) {
     const scrollToSection = (id: string) => {
@@ -42,7 +40,15 @@ function Navigation({ children }: { children: React.ReactNode }) {
                             Work
                         </Button>
                     </NavigationMenuItem>
-
+<NavigationMenuItem className="text-white">
+                        <Button
+                            className="text-white bg-transparent hover:bg-transparent border-1"
+                            variant="default"
+                            onClick={() => scrollToSection("#skills-section")}
+                        >
+                            Skills
+                        </Button>
+                    </NavigationMenuItem>
                     <NavigationMenuItem className="text-white">
                         <Button
                             className="text-white bg-transparent hover:bg-transparent border-1"

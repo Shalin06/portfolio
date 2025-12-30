@@ -2,10 +2,8 @@
 import { Avatar, AvatarImage } from "@/app/components/ui/avatar";
 import {
     Card,
-    CardAction,
     CardContent,
     CardDescription,
-    CardHeader,
     CardTitle,
 } from "@/app/components/ui/card";
 import { calculateExperience } from "@/lib/utils";

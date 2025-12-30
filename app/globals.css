@@ -145,3 +145,27 @@ html {
 #contact-section {
   scroll-margin-top: 65px;
 }
+
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px;
+    /* scrollbar width */
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(38, 16, 69, 0.4);
+    /* dark purple track */
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #4F228D, #A970FF);
+    border-radius: 10px;
+    border: 2px solid #2C1250;
+    /* border to separate from track */
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #693B93, #C28CFF);
+  }
+}

@@ -231,13 +231,13 @@ function WorkExperience() {
 
     return (
         <div id="work-section" className="flex items-center justify-center">
-            <Card className="bg-transparent border-none shadow-none flex flex-col items-start justify-center">
-                <CardTitle className="text-white text-3xl">
+            <Card className="bg-transparent border-none shadow-none flex flex-col gap-10 w-1/2">
+                <CardTitle className="text-white text-3xl py-0 mt-0">
                     Work Experience
                 </CardTitle>
                 <Accordion
                     type="multiple"
-                    className="w-full md:w-[700px] flex flex-col gap-4 mt-4"
+                        className="w-full flex flex-col gap-4"
                 >
                     {experience.map((exp, index) => (
                         <ExperienceAccordianCard key={index} experience={exp} />
