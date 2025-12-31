@@ -1,5 +1,9 @@
 "use client";
-import { Avatar, AvatarFallback, AvatarImage } from "@/app/components/ui/avatar";
+import {
+    Avatar,
+    AvatarFallback,
+    AvatarImage,
+} from "@/app/components/ui/avatar";
 import { Button } from "@/app/components/ui/button";
 import {
     NavigationMenu,
@@ -21,7 +25,13 @@ function Navigation({ children }: { children: React.ReactNode }) {
             }}
         >
             <div className="flex-[1] flex justify-end">
-                <Button variant="ghost" className="hover:bg-transparent" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+                <Button
+                    variant="ghost"
+                    className="hover:bg-transparent"
+                    onClick={() =>
+                        window.scrollTo({ top: 0, behavior: "smooth" })
+                    }
+                >
                     <Avatar>
                         <AvatarImage src="/images/Shalin_Jain.png" />
                         <AvatarFallback>ME</AvatarFallback>
@@ -32,7 +42,7 @@ function Navigation({ children }: { children: React.ReactNode }) {
             <div className="flex-[2] flex justify-center">
                 <NavigationMenuList className="flex items-center gap-[50px]">
                     <NavigationMenuItem className="text-white">
-                        <Button 
+                        <Button
                             className="text-white bg-transparent hover:bg-transparent border-1"
                             variant="default"
                             onClick={() => scrollToSection("#work-section")}
@@ -40,7 +50,7 @@ function Navigation({ children }: { children: React.ReactNode }) {
                             Work
                         </Button>
                     </NavigationMenuItem>
-<NavigationMenuItem className="text-white">
+                    <NavigationMenuItem className="text-white">
                         <Button
                             className="text-white bg-transparent hover:bg-transparent border-1"
                             variant="default"
