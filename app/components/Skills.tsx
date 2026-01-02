@@ -13,29 +13,29 @@ const SquareSkillCard = ({ skill }: { skill: string }) => {
         transition-all duration-300 cursor-pointer
         hover:-translate-y-1 hover:scale-105
         shadow-[inset_2px_2px_6px_#ffffff20,inset_-2px_-2px_6px_#00000060]
-        gap-0 py-0
+        gap-0 py-0 p-2 md:p-3
       "
     >
-      <Avatar className="w-16 h-16 relative z-10 rounded-lg overflow-hidden">
+      <Avatar className="w-10 h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 relative z-10 rounded-lg overflow-hidden">
         <AvatarImage src={path} alt={skill} className="w-full h-full object-cover" />
       </Avatar>
-      <label className="w-full text-center text-white text-md whitespace-normal wrap-break-word leading-tight mt-1">{skill}</label>
+      <label className="w-full text-center text-white text-xs md:text-sm lg:text-md whitespace-normal wrap-break-word leading-tight mt-1">{skill}</label>
     </Card>
   );
 };
 
 function Skills() {
   return (
-    <div id="skills-section" className="flex items-center justify-center w-full">
-      <Card className="bg-transparent border-none shadow-none flex flex-col gap-6 w-1/2">
-        <CardTitle className="text-white text-3xl mb-4">
+    <div id="skills-section" className="flex items-center justify-center w-full px-4 sm:px-6 lg:px-8">
+      <Card className="bg-transparent border-none shadow-none flex flex-col gap-4 sm:gap-6 w-full md:w-1/2">
+        <CardTitle className="text-white text-2xl sm:text-3xl mb-2 sm:mb-4">
           Skills
         </CardTitle>
 
         <CardContent
           className="
-                        grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4
-                        p-3 rounded-xl
+                        grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 sm:gap-3 md:gap-4
+                        p-2 sm:p-3 rounded-xl
                         bg-[#2C1250]/60 backdrop-blur-xl
                         border border-[#693B93]/30
                         max-h-77

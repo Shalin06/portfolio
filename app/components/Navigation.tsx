@@ -23,26 +23,26 @@ function Navigation({ children }: { children: React.ReactNode }) {
                 height: "60px",
             }}
         >
-            <div className="flex-[1] flex justify-end">
+            <div className="flex-[1] flex justify-end px-2 sm:px-4">
                 <Button
                     variant="ghost"
-                    className="hover:bg-transparent"
+                    className="hover:bg-transparent h-auto p-0"
                     onClick={() =>
                         window.scrollTo({ top: 0, behavior: "smooth" })
                     }
                 >
-                    <Avatar>
+                    <Avatar className="w-10 h-10">
                         <AvatarImage src="/images/Shalin_Jain.png" />
                         <AvatarFallback>ME</AvatarFallback>
                     </Avatar>
                 </Button>
             </div>
 
-            <div className="flex-[2] flex justify-center">
-                <NavigationMenuList className="flex items-center gap-[50px]">
+            <div className="flex-[2] hidden md:flex justify-center px-2">
+                <NavigationMenuList className="flex items-center gap-4 sm:gap-8 md:gap-10 lg:gap-[50px]">
                     <NavigationMenuItem className="text-white">
                         <Button
-                            className="text-white bg-transparent hover:bg-transparent border-1"
+                            className="text-xs sm:text-sm md:text-base text-white bg-transparent hover:bg-transparent border-1"
                             variant="default"
                             onClick={() => scrollToSection("#work-section")}
                         >
@@ -51,7 +51,7 @@ function Navigation({ children }: { children: React.ReactNode }) {
                     </NavigationMenuItem>
                     <NavigationMenuItem className="text-white">
                         <Button
-                            className="text-white bg-transparent hover:bg-transparent border-1"
+                            className="text-xs sm:text-sm md:text-base text-white bg-transparent hover:bg-transparent border-1"
                             variant="default"
                             onClick={() => scrollToSection("#skills-section")}
                         >
@@ -60,7 +60,7 @@ function Navigation({ children }: { children: React.ReactNode }) {
                     </NavigationMenuItem>
                     <NavigationMenuItem className="text-white">
                         <Button
-                            className="text-white bg-transparent hover:bg-transparent border-1"
+                            className="text-xs sm:text-sm md:text-base text-white bg-transparent hover:bg-transparent border-1"
                             variant="default"
                             onClick={() => scrollToSection("#projects-section")}
                         >
@@ -70,7 +70,7 @@ function Navigation({ children }: { children: React.ReactNode }) {
 
                     <NavigationMenuItem className="text-white">
                         <Button
-                            className="text-white bg-transparent hover:bg-transparent border-1"
+                            className="text-xs sm:text-sm md:text-base text-white bg-transparent hover:bg-transparent border-1"
                             variant="default"
                             onClick={() => scrollToSection("#contact-section")}
                         >

@@ -49,15 +49,15 @@ function About() {
     );
 
     const profileCard = (
-        <div className="flex items-center justify-center">
-            <Card className="bg-transparent border-none shadow-none flex flex-col gap-10 items-center justify-center">
-                <div className="flex flex-row w-2/3">
-                    <CardContent>{image}</CardContent>
-                    <CardContent className="text-white py-8">
-                        <CardTitle className="text-3xl text-white mb-2">
+        <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
+            <Card className="bg-transparent border-none shadow-none flex flex-col gap-6 sm:gap-10 items-center justify-center w-full">
+                <div className="flex flex-col md:flex-row w-full md:w-2/3 gap-6 items-center">
+                    <CardContent className="w-full md:w-auto flex justify-center">{image}</CardContent>
+                    <CardContent className="text-white py-6 md:py-8 w-full md:w-auto">
+                        <CardTitle className="text-2xl sm:text-3xl text-white mb-2">
                             Hi, I'm Shalin Jain
                         </CardTitle>
-                        <CardDescription className="text-md text-white">
+                        <CardDescription className="text-sm sm:text-base text-white">
                             A curiosity-driven builder blending clean
                             engineering with creative problem-solving and a
                             calm, get-it-done attitude.
@@ -72,14 +72,14 @@ function About() {
     const label = exp <= 1 ? "year" : "years";
 
     const workCard = (
-        <div className="flex items-center justify-center">
-            <Card className="bg-transparent border-none shadow-none flex flex-col gap-10 w-1/2">
-                <CardContent className="text-white items-start">
-                    <CardTitle className="text-2xl text-white mb-2">
+        <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
+            <Card className="bg-transparent border-none shadow-none flex flex-col gap-6 sm:gap-10 w-full md:w-1/2">
+                <CardContent className="text-white items-start p-0">
+                    <CardTitle className="text-xl sm:text-2xl text-white mb-2">
                         I'm a Software Engineer
                     </CardTitle>
                     <b>
-                        <CardDescription className="text-md text-white flex items-center flex-wrap gap-1">
+                        <CardDescription className="text-sm text-white flex items-center flex-wrap gap-1">
                             I am currently working at
                             <Link
                                 href="https://www.cvent.com"
@@ -94,7 +94,7 @@ function About() {
                         </CardDescription>
                     </b>
 
-                    <CardDescription className="text-sm text-white">
+                    <CardDescription className="text-xs sm:text-sm text-white">
                         I am a Full Stack Developer having an experience of{" "}
                         <b>{exp}</b> {label} in building production-grade web
                         softwares. I have graduated from IIT Jodhpur in 2025

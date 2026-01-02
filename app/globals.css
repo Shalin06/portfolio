@@ -169,3 +169,16 @@ html {
     background: linear-gradient(180deg, #693B93, #C28CFF);
   }
 }
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.orbit-spin {
+  animation: orbit 2.5s linear infinite;
+}
+

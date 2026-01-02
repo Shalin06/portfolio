@@ -21,7 +21,7 @@ export function calculateExperience(startDate: Date, endDate?: Date) {
 
     // First year: minimum 0.5
     if (years < 1) {
-        return 0.5;
+        return 1;
     }
 
     // After first year: round to .0 or .5
