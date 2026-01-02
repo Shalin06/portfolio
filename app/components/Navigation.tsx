@@ -10,12 +10,11 @@ import {
     NavigationMenuItem,
     NavigationMenuList,
 } from "@/app/components/ui/navigation-menu";
-
+export const scrollToSection = (id: string) => {
+    const el = document.querySelector(id);
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+};
 function Navigation({ children }: { children: React.ReactNode }) {
-    const scrollToSection = (id: string) => {
-        const el = document.querySelector(id);
-        if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    };
     const nav = (
         <NavigationMenu
             className="w-full max-w-none flex items-center fixed z-100"

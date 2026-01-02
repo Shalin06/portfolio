@@ -149,7 +149,7 @@ html {
 @layer utilities {
   ::-webkit-scrollbar {
     width: 8px;
-    /* scrollbar width */
+    scroll-behavior: smooth;
   }
 
   ::-webkit-scrollbar-track {
