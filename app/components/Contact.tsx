@@ -18,6 +18,7 @@ import { Input } from "./ui/input"
 import Link from "next/link"
 import { Textarea } from "./ui/textarea"
 import React, { useState } from "react"
+import { sendMail } from "@/lib/send-email"
 
 
 type ContactValues = {
@@ -44,16 +45,35 @@ function Contact() {
         subject: "",
         message: ""
     })
+    const [loading, setLoading] = useState(false)
     const handleChange = (event: React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLTextAreaElement>) => {
         setValues({ ...values, [event.target.name]: event.target.value })
     }
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         if (!validateInput(values)) {
             return;
         }
-        console.log(values)
-
+        try {
+            setLoading(true);
+            await sendMail({
+                email: values.email,
+                subject: values.subject,
+                text: `Name: ${values.name}\n Email: ${values.email} \n Phone: ${values.phone}\nMessage: ${values.message}`,
+            });
+        } catch(error) {
+            alert(`Error in sending email`)
+        }finally {
+            alert('Message sent')
+            setValues({
+                name:"",
+                email:"",
+                subject:"",
+                message:"",
+                phone:""
+            })
+            setLoading(false);
+        }
     }
     return (
         <div
@@ -133,7 +153,7 @@ function Contact() {
 
                             <Field>
                                 <FieldLabel>Message</FieldLabel>
-                                <Textarea name="message" rows={4} onChange={handleChange} className="text-shadow-white" placeholder="Your Message"/>
+                                <Textarea name="message" rows={4} onChange={handleChange} className="text-shadow-white" placeholder="Your Message" />
                             </Field>
 
                             <Button
@@ -143,8 +163,12 @@ function Contact() {
               bg-purple-600 hover:bg-purple-700
               transition-all
             "
+                                disabled={loading}
                             >
-                                Send Message
+                                {loading && (
+                                    <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
+                                )}
+                                {loading ? "Sending..." : "Send Message"}
                             </Button>
                         </Card>
                     </form>
