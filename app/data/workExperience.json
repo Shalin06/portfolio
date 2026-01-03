@@ -1,0 +1,65 @@
+[
+  {
+    "company": "Cvent India Pvt Ltd",
+    "position": "Software Engineer I",
+    "start": "June 2025",
+    "location": "Gurgaon, India",
+    "logo": "images/cvent.png",
+    "description": "Contributed to production features, UI/UX consistency, backend enhancements and LLM-based integrations.",
+    "details": "Working across frontend and backend to improve product usability, system performance, and automation pipelines, while collaborating with cross-functional teams for deployments and feature delivery.",
+    "skills": [
+      "React",
+      "TypeScript",
+      "Dropwizard",
+      "Spring Boot",
+      "AWS",
+      "Jenkins",
+      "LLM Integration",
+      "Microservices",
+      "CI/CD"
+    ],
+    "projects": [
+      {
+        "name": "Invoice UI Design System",
+        "details": "Currently designing and implementing an invoice experience with customizable layouts and reusable UI components."
+      },
+      {
+        "name": "Website Theming",
+        "details": "Built and improved UI consistency and site-wide theming support ensuring customizable experiences across products."
+      },
+      {
+        "name": "AI Integration Demo",
+        "details": "Developed a demo project with LLM-based interactions to showcase AI-driven improvements for speaker workflows."
+      }
+    ]
+  },
+  {
+    "company": "Coinbase India Services",
+    "position": "Software Engineering Intern",
+    "start": "May 2024",
+    "end": "August 2024",
+    "location": "Bengaluru, India",
+    "logo": "images/coinbase.png",
+    "description": "Worked on search improvements, performance optimization and microservices within a production environment.",
+    "details": "Enhanced the search algorithm, optimized cache latency through traffic rerouting, and contributed to unit testing and Agile workflows in a distributed microservices setup.",
+    "skills": [
+      "Golang",
+      "gRPC",
+      "Microservices",
+      "Caching",
+      "Prose Search",
+      "Agile",
+      "Unit Testing"
+    ],
+    "projects": [
+      {
+        "name": "Search Algorithm Upgrade",
+        "details": "Enhanced search support with multi-query handling using Prose and integrated deep linking for efficient navigation."
+      },
+      {
+        "name": "Cache Latency Optimization",
+        "details": "Reduced latency by implementing traffic rerouting strategies and optimizing caching mechanisms using Golang and gRPC."
+      }
+    ]
+  }
+]

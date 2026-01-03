@@ -9,6 +9,7 @@ import {
 import { calculateExperience } from "@/lib/utils";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import aboutData from "../data/about.json"
 
 function About() {
     const [imgSize, setImgSize] = useState<{ w: number; h: number }>();
@@ -55,12 +56,10 @@ function About() {
                     <CardContent className="w-full md:w-auto flex justify-center">{image}</CardContent>
                     <CardContent className="text-white py-6 md:py-8 w-full md:w-auto">
                         <CardTitle className="text-2xl sm:text-3xl text-white mb-2">
-                            Hi, I'm Shalin Jain
+                            {aboutData.title}
                         </CardTitle>
                         <CardDescription className="text-sm sm:text-base text-white">
-                            A curiosity-driven builder blending clean
-                            engineering with creative problem-solving and a
-                            calm, get-it-done attitude.
+                            {aboutData.description}
                         </CardDescription>
                     </CardContent>
                 </div>
@@ -76,7 +75,7 @@ function About() {
             <Card className="bg-transparent border-none shadow-none flex flex-col gap-6 sm:gap-10 w-full md:w-1/2">
                 <CardContent className="text-white items-start p-0">
                     <CardTitle className="text-xl sm:text-2xl text-white mb-2">
-                        I'm a Software Engineer
+                        {aboutData.title}
                     </CardTitle>
                     <b>
                         <CardDescription className="text-sm text-white flex items-center flex-wrap gap-1">
@@ -86,11 +85,11 @@ function About() {
                                 className="flex items-center gap-1 text-blue-400"
                             >
                                 <Avatar className="h-5 w-5 relative z-10">
-                                    <AvatarImage src="/images/cvent.png" />
+                                    <AvatarImage src={aboutData.companyUrl} />
                                 </Avatar>
-                                Cvent
+                                {aboutData.currentCompany}
                             </Link>
-                            as a Software Engineer I.
+                            as a {aboutData.currentPosition}
                         </CardDescription>
                     </b>
 

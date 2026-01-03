@@ -1,0 +1,9 @@
+{
+    "title": "Hi, I am Shalin Jain",
+    "description": "A curiosity-driven builder blending clean engineering with creative problem-solving and a calm, get-it-done attitude.",
+    "currentCompany": "Cvent",
+    "currentPosition": "Software Engineer I",
+    "companyUrl": "images/cvent.png",
+    "details": "I am a Full Stack Developer having an experience of {exp} {label} in building production-grade web softwares. I have graduated from IIT Jodhpur in 2025 with a B.Tech in Computer Science and Engineering scoring a CGPA of {cgpa}.",
+    "cgpa":8.69
+}

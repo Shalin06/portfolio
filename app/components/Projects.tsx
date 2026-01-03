@@ -10,7 +10,7 @@ import { IconBrandGithub, IconWorld } from "@tabler/icons-react";
 import Link from "next/link";
 import { useState } from "react";
 import { scrollToSection } from "./Navigation";
-
+import projectData from "../data/projects.json"
 type ProjectCardProps = {
     project: Project;
     alternate: boolean;
@@ -277,93 +277,7 @@ const ProjectCard = (props: ProjectCardProps) => {
 }
 
 function Projects() {
-    const projectData: Project[] = [
-        {
-            title: "Data To Market (D2M)",
-            description:
-                "A decentralized and privacy-preserving data marketplace enabling secure data sharing and collaborative ML training.",
-            imageUrl: "/images/d2m2.png",
-            projectUrl: "",
-            githubUrl: "",
-            tectStack: [
-                "Python",
-                "Blockchain",
-                "Federated Learning",
-                "Distributed Systems",
-                "Machine Learning"
-            ],
-            detailedDescriptionInPoints: [
-                "Designed a fully decentralized data marketplace using blockchain-based governance.",
-                "Enabled privacy-preserving model training via federated learning and off-chain computation.",
-                "Ensured Byzantine fault tolerance with linear scalability across participants.",
-                "Evaluated performance on MNIST, CIFAR-10, and Fashion-MNIST datasets.",
-                "Achieved 98.75% accuracy on MNIST while remaining robust with 10–30% Byzantine nodes."
-            ]
-        },
-        {
-            title: "Project Portal",
-            description:
-                "A real-time web platform for managing, submitting, and reviewing academic or team projects.",
-            imageUrl: "images/project_portal.png",
-            projectUrl: "https://projectportalweb.web.app/",
-            githubUrl: "https://github.com/Shalin06/Project_Portal",
-            tectStack: [
-                "React",
-                "Firebase",
-                "JavaScript",
-                "REST APIs"
-            ],
-            detailedDescriptionInPoints: [
-                "Built a responsive web application for real-time project management and reviews.",
-                "Designed a clean and intuitive UI to simplify project submission workflows.",
-                "Integrated Firebase for authentication, storage, and real-time database updates.",
-                "Used REST APIs to optimize data communication and improve performance.",
-                "Focused on usability and scalability for multi-user environments."
-            ]
-        },
-        {
-            title: "Brain Stroke Prediction",
-            description:
-                "A machine learning system to predict stroke probability using health and demographic data.",
-            imageUrl: "/images/Brain-Stroke-Prediction.png",
-            projectUrl: "",
-            githubUrl: "https://github.com/Shalin06/Brain-Stroke-Prediction",
-            tectStack: [
-                "Python",
-                "Scikit-learn",
-                "Neural Networks",
-                "Ensemble Learning"
-            ],
-            detailedDescriptionInPoints: [
-                "Built predictive models using classical ML and neural networks.",
-                "Applied ensemble techniques including voting classifiers to improve accuracy.",
-                "Handled real-world healthcare datasets with preprocessing and feature engineering.",
-                "Captured non-linear patterns in medical data using neural networks.",
-                "Focused on reliability and interpretability of predictions."
-            ]
-        },
-        {
-            title: "Country Data Analysis",
-            description:
-                "A data-driven clustering solution to categorize countries based on socio-economic indicators.",
-            imageUrl: "/images/country data.png",
-            projectUrl: "",
-            githubUrl: "https://github.com/Shalin06/Country_Data_Project-ML/",
-            tectStack: [
-                "Python",
-                "Machine Learning",
-                "KMeans Clustering",
-                "Hierarchical Clustering"
-            ],
-            detailedDescriptionInPoints: [
-                "Analyzed global socio-economic datasets using unsupervised learning.",
-                "Applied KMeans and Agglomerative Clustering for pattern discovery.",
-                "Segmented countries into development categories for policy insights.",
-                "Enabled data-backed resource allocation strategies.",
-                "Visualized and interpreted clustering results for decision-making."
-            ]
-        }
-    ];
+    const data: Project[] = projectData as Project[]
 
     const [visibleCount, setVisibleCount] = useState(3);
 
@@ -377,7 +291,7 @@ function Projects() {
                     items-center justify-center
                     max-h-none">
 
-                    {projectData.slice(0, visibleCount).map((proj, index) => (
+                    {data.slice(0, visibleCount).map((proj, index) => (
                         <ProjectCard
                             key={index}
                             project={proj}
@@ -387,7 +301,7 @@ function Projects() {
                     ))}
                 </CardContent>
                 <CardFooter className="items-center justify-center flex">
-                    {visibleCount < projectData.length && (
+                    {visibleCount < data.length && (
                         <div className="flex items-center justify-center text-white">
                             <Button
                                 variant="ghost"
@@ -400,7 +314,7 @@ function Projects() {
                             </Button>
                         </div>
                     )}
-                    {visibleCount >= projectData.length && projectData.length > 3 && (
+                    {visibleCount >= data.length && data.length > 3 && (
                         <div className="flex items-center justify-center text-white">
                             <Button
                                 variant="ghost"

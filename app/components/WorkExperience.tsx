@@ -13,8 +13,7 @@ import {
     IconLocation,
     IconMapPin,
 } from "@tabler/icons-react";
-import Image from "next/image";
-
+import experienceData from "../data/workExperience.json"
 type Experience = {
     company: string;
     location: string;
@@ -27,7 +26,6 @@ type Experience = {
     skills: string[];
     projects: { name: string; link?: string; details?: string }[];
 };
-
 const ExperienceAccordianCard = ({
     experience,
 }: {
@@ -48,7 +46,7 @@ const ExperienceAccordianCard = ({
         >
             <div className="grid grid-cols-1 md:grid-cols-2 md:flex-row md:items-center w-full text-white gap-4">
                 <div className="flex items-center space-x-3 md:space-x-4 min-w-0">
-                    <Avatar className="w-8 h-8 md:w-10 md:h-10 relative z-10 rounded-full overflow-hidden flex-shrink-0">
+                    <Avatar className="w-8 h-8 md:w-10 md:h-10 relative z-10 rounded-full overflow-hidden shrink-0">
                         <AvatarImage
                             src={experience.logo}
                             alt={`${experience.company} logo`}
@@ -67,11 +65,11 @@ const ExperienceAccordianCard = ({
                 </div>
                 <div className="mt-2 md:mt-0 text-white-100 flex flex-col items-end gap-1">
                     <p className="text-xs md:text-sm flex gap-2 items-center">
-                        {<IconCalendarFilled className="!size-4 md:!size-5 flex-shrink-0" />}{" "}
+                        {<IconCalendarFilled className="size-4! md:size-5! shrink-0" />}{" "}
                         <span className="truncate">{experience.start} - {experience.end ? experience.end : "Present"}</span>
                     </p>
                     <div className="text-white-100 flex gap-1 items-center text-xs md:text-sm">
-                        {<IconMapPin className="!size-3 md:!size-4 flex-shrink-0" />}{" "}
+                        {<IconMapPin className="size-3! md:size-4! shrink-0" />}{" "}
                         <span className="truncate">{experience.location}</span>
                     </div>
                 </div>
@@ -152,82 +150,7 @@ const ExperienceAccordianCard = ({
     );
 };
 function WorkExperience() {
-    const experience: Experience[] = new Array();
-    experience.push(
-        {
-            company: "Cvent India Pvt Ltd",
-            position: "Software Engineer I",
-            start: "June 2025",
-            location: "Gurgaon, India",
-            logo: "images/cvent.png",
-            description:
-                "Contributed to production features, UI/UX consistency, backend enhancements and LLM-based integrations.",
-            details:
-                "Working across frontend and backend to improve product usability, system performance, and automation pipelines, while collaborating with cross-functional teams for deployments and feature delivery.",
-            skills: [
-                "React",
-                "TypeScript",
-                "Dropwizard",
-                "Spring Boot",
-                "AWS",
-                "Jenkins",
-                "LLM Integration",
-                "Microservices",
-                "CI/CD",
-            ],
-            projects: [
-                {
-                    name: "Invoice UI Design System",
-                    details:
-                        "Currently designing and implementing an invoice experience with customizable layouts and reusable UI components.",
-                },
-                {
-                    name: "Website Theming",
-                    details:
-                        "Built and improved UI consistency and site-wide theming support ensuring customizable experiences across products.",
-                },
-                {
-                    name: "AI Integration Demo",
-                    details:
-                        "Developed a demo project with LLM-based interactions to showcase AI-driven improvements for speaker workflows.",
-                },
-            ],
-        },
-        {
-            company: "Coinbase India Services",
-            position: "Software Engineering Intern",
-            start: "May 2024",
-            end: "August 2024",
-            location: "Bengaluru, India",
-            logo: "images/coinbase.png",
-            description:
-                "Worked on search improvements, performance optimization and microservices within a production environment.",
-            details:
-                "Enhanced the search algorithm, optimized cache latency through traffic rerouting, and contributed to unit testing and Agile workflows in a distributed microservices setup.",
-            skills: [
-                "Golang",
-                "gRPC",
-                "Microservices",
-                "Caching",
-                "Prose Search",
-                "Agile",
-                "Unit Testing",
-            ],
-            projects: [
-                {
-                    name: "Search Algorithm Upgrade",
-                    details:
-                        "Enhanced search support with multi-query handling using Prose and integrated deep linking for efficient navigation.",
-                },
-                {
-                    name: "Cache Latency Optimization",
-                    details:
-                        "Reduced latency by implementing traffic rerouting strategies and optimizing caching mechanisms using Golang and gRPC.",
-                },
-            ],
-        },
-    );
-
+    const data: Experience[] = experienceData as Experience[];
     return (
         <div id="work-section" className="flex items-center justify-center px-4 sm:px-6 lg:px-8">
             <Card className="bg-transparent border-none shadow-none flex flex-col gap-6 sm:gap-10 w-full md:w-1/2">
@@ -238,7 +161,7 @@ function WorkExperience() {
                     type="multiple"
                         className="w-full flex flex-col gap-4"
                 >
-                    {experience.map((exp, index) => (
+                    {data.map((exp, index) => (
                         <ExperienceAccordianCard key={index} experience={exp} />
                     ))}
                 </Accordion>

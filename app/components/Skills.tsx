@@ -1,6 +1,6 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { Card, CardContent, CardTitle } from "./ui/card";
-
+import skillsData from "../data/skills.json"
 const SquareSkillCard = ({ skill }: { skill: string }) => {
   const path = `/images/${skill.toLowerCase().replaceAll(".", "").replaceAll(" ", "")}.png`;
 
@@ -43,26 +43,9 @@ function Skills() {
                         items-center justify-center
                         shadow-[inset_1px_1px_6px_rgba(255,255,255,0.08),inset_-2px_-2px_8px_rgba(0,0,0,0.4)]"
         >
-          <SquareSkillCard skill="Java" />
-          <SquareSkillCard skill="C++" />
-          <SquareSkillCard skill="TypeScript" />
-          <SquareSkillCard skill="React" />
-          <SquareSkillCard skill="Next.js" />
-          <SquareSkillCard skill="Golang" />
-          <SquareSkillCard skill="SQL" />
-          <SquareSkillCard skill="GraphQL" />
-          <SquareSkillCard skill="REST API" />
-          <SquareSkillCard skill="Gen AI Intergration" />
-          <SquareSkillCard skill="HTML" />
-          <SquareSkillCard skill="Tailwind CSS" />
-          <SquareSkillCard skill="Jenkins" />
-          <SquareSkillCard skill="Docker" />
-          <SquareSkillCard skill="AWS" />
-          <SquareSkillCard skill="Git" />
-          <SquareSkillCard skill="Firebase" />
-          <SquareSkillCard skill="PyTorch" />
-          <SquareSkillCard skill="gRPC" />
-          <SquareSkillCard skill="Jira" />
+          {skillsData.map((skill, index) => (
+            <SquareSkillCard skill={skill} key={index}/>
+          ))}
 
         </CardContent>
       </Card>
