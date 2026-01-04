@@ -36,8 +36,6 @@ function Skills() {
           className="
                         grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-2 sm:gap-3 md:gap-4
                         p-2 sm:p-3 rounded-xl
-                        bg-[#2C1250]/60 backdrop-blur-xl
-                        border border-[#693B93]/30
                         max-h-77
                         overflow-y-auto
                         items-center justify-center

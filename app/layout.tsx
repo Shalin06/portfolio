@@ -10,7 +10,7 @@ export default function RootLayout({
         <html>
             <body
                 style={{
-                    background: "#11071F",
+                    background: "#030014",
                 }}
             >
                 <Navigation>{children}</Navigation>
