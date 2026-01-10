@@ -1,5 +1,5 @@
 "use client"
-import { IconMail, IconPhone } from "@tabler/icons-react"
+import { IconBrandGithub, IconBrandLinkedin, IconMail, IconPhone } from "@tabler/icons-react"
 import { Button } from "./ui/button"
 import {
     Card,
@@ -61,16 +61,16 @@ function Contact() {
                 subject: values.subject,
                 text: `Name: ${values.name}\n Email: ${values.email} \n Phone: ${values.phone}\nMessage: ${values.message}`,
             });
-        } catch(error) {
+        } catch (error) {
             alert(`Error in sending email`)
-        }finally {
+        } finally {
             alert('Message sent')
             setValues({
-                name:"",
-                email:"",
-                subject:"",
-                message:"",
-                phone:""
+                name: "",
+                email: "",
+                subject: "",
+                message: "",
+                phone: ""
             })
             setLoading(false);
         }
@@ -107,15 +107,26 @@ function Contact() {
                         "
                     >
                         <div className="flex items-center gap-3">
-                            <IconMail className="text-purple-500" />
-                            <Link href="mailto:shalin6102003@gmail.com" className="text-white/90">
-                                shalin6102003@gmail.com
+                            <Link href="mailto:shalin6102003@gmail.com" className="text-white/90 flex gap-1">
+                                <IconMail className="text-purple-500" />
+                                Shalin Jain
                             </Link>
                         </div>
                         <div className="flex items-center gap-3">
-                            <IconPhone className="text-purple-500" />
-                            <Link href="tel:9328096484" className="text-white/90">
+                            <Link href="tel:9328096484" className="text-white/90 flex gap-1">
+                                <IconPhone className="text-purple-500" />
                                 9328096484
+                            </Link>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <Link href="https://www.linkedin.com/in/shalin-jain-88b761237/" className="text-white/90 flex gap-1">
+                                <IconBrandLinkedin className="text-purple-500" />LinkedIn
+                            </Link>
+                        </div>
+
+                        <div className="flex items-center gap-3">
+                            <Link href="https://github.com/Shalin06/" className="text-white/90 flex gap-1">
+                                <IconBrandGithub className="text-purple-500" />GitHub
                             </Link>
                         </div>
                     </Card>
