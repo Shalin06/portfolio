@@ -146,25 +146,25 @@ function Contact() {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                                 <Field>
                                     <FieldLabel>Name</FieldLabel>
-                                    <Input name="name" required onChange={handleChange} className="text-shadow-white" placeholder="John Doe" />
+                                    <Input name="name" value={values.name} required onChange={handleChange} className="text-shadow-white" placeholder="John Doe" />
                                 </Field>
                                 <Field>
                                     <FieldLabel>Phone</FieldLabel>
-                                    <Input name="phone" type="tel" onChange={handleChange} className="text-shadow-white" placeholder="987654321" />
+                                    <Input name="phone" type="tel" value={values.phone} onChange={handleChange} className="text-shadow-white" placeholder="987654321" />
                                 </Field>
                                 <Field>
                                     <FieldLabel>Email</FieldLabel>
-                                    <Input name="email" type="email" required onChange={handleChange} className="text-shadow-white" placeholder="John.Doe@example.com" />
+                                    <Input name="email" type="email" value={values.email} required onChange={handleChange} className="text-shadow-white" placeholder="John.Doe@example.com" />
                                 </Field>
                                 <Field>
                                     <FieldLabel>Subject</FieldLabel>
-                                    <Input name="subject" required onChange={handleChange} className="text-shadow-white" placeholder="Subject for Message" />
+                                    <Input name="subject" value={values.subject} required onChange={handleChange} className="text-shadow-white" placeholder="Subject for Message" />
                                 </Field>
                             </div>
 
                             <Field>
                                 <FieldLabel>Message</FieldLabel>
-                                <Textarea name="message" rows={4} onChange={handleChange} className="text-shadow-white" placeholder="Your Message" />
+                                <Textarea name="message" rows={4} value={values.message} onChange={handleChange} className="text-shadow-white" placeholder="Your Message" />
                             </Field>
 
                             <Button
