@@ -1,5 +1,6 @@
 import "./globals.css";
 import Navigation from "./components/Navigation";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function RootLayout({
     children,
@@ -14,6 +15,7 @@ export default function RootLayout({
                 }}
             >
                 <Navigation>{children}</Navigation>
+                <Analytics />
             </body>
         </html>
     );
