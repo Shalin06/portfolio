@@ -2,7 +2,7 @@ import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { Card, CardContent, CardTitle } from "./ui/card";
 import skillsData from "../data/skills.json"
 const SquareSkillCard = ({ skill }: { skill: string }) => {
-  const path = `/images/${skill.toLowerCase().replaceAll(".", "").replaceAll(" ", "")}.png`;
+  const path = `/images/skills/${skill.toLowerCase().replaceAll(".", "").replaceAll(" ", "")}.png`;
 
   return (
     <Card
