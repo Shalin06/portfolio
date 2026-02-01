@@ -3,7 +3,7 @@
     "title": "Data To Market (D2M)",
     "description": "A decentralized and privacy-preserving data marketplace enabling secure data sharing and collaborative ML training.",
     "imageUrl": "/images/d2m2.png",
-    "projectUrl": "",
+    "projectUrl": "https://arxiv.org/abs/2512.10372",
     "githubUrl": "",
     "tectStack": [
       "Python",

@@ -17,6 +17,13 @@ export const scrollToSection = (id: string) => {
     if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
+const handleClick = (id: string) => {
+    if(id === "#resume-section") {
+        window.open("/Shalin_Jain_Resume_SWE.pdf", "_blank", "noopener noreferrer");
+    } else {
+        scrollToSection(id);
+    }
+}
 const Cursor = ({ position }: {
     position: {
         left: number;
@@ -59,7 +66,7 @@ const Tab = ({ children, setPosition, id }: {
             <Button
                 className="text-xs sm:text-sm md:text-base text-white bg-transparent hover:bg-transparent hover:text-purple-800"
                 variant="ghost"
-                onClick={() => scrollToSection(id)}
+                onClick={() => handleClick(id)}
             >
                 {children}
             </Button>
@@ -106,6 +113,7 @@ function Navigation({ children }: { children: React.ReactNode }) {
                     <Tab setPosition={setPosition} id="#skills-section">Skills</Tab>
                     <Tab setPosition={setPosition} id="#projects-section">Projects</Tab>
                     <Tab setPosition={setPosition} id="#contact-section">Contact</Tab>
+                    <Tab setPosition={setPosition} id="#resume-section">Resume</Tab>
                     <Cursor position={position} />
                 </NavigationMenuList>
             </div>
